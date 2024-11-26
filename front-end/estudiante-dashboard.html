@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Estudiante</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="estudiante.js" defer></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Bienvenido, Estudiante</h1>
+        <button id="logoutButton">Cerrar Sesión</button>
+    </header>
+    <main class="dashboard-main">
+        <section class="materias-section">
+            <h2>Tus Materias</h2>
+            <ul id="materiasList">
+                <!-- Las materias inscritas por el estudiante se cargarán aquí -->
+            </ul>
+        </section>
+        <section class="calificaciones-section">
+            <h2>Calificaciones</h2>
+            <table id="calificacionesTable">
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>Calificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Calificaciones del estudiante -->
+                </tbody>
+            </table>
+            <div class="promedio-section">
+                <h3>Promedio General: <span id="promedio"></span></h3>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

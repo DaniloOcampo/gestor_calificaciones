@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Panel de Administración</h1>
+        <button id="logoutButton">Cerrar Sesión</button>
+    </header>
+    <main class="dashboard-main">
+        <section class="gestion-section">
+            <h2>Gestión de Usuarios</h2>
+            <button id="addUserButton">Agregar Usuario</button>
+            <ul id="userList">
+                <!-- Lista de usuarios -->
+            </ul>
+        </section>
+        <section class="gestion-section">
+            <h2>Gestión de Materias y Cursos</h2>
+            <button id="addCourseButton">Agregar Curso</button>
+            <button id="addSubjectButton">Agregar Materia</button>
+            <ul id="courseList">
+                <!-- Lista de cursos -->
+            </ul>
+        </section>
+        <section class="stats-section">
+            <h2>Estadísticas Generales</h2>
+            <ul>
+                <li>Total de Usuarios: <span id="totalUsers"></span></li>
+                <li>Total de Cursos: <span id="totalCourses"></span></li>
+                <li>Total de Materias: <span id="totalSubjects"></span></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

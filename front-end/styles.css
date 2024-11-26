@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+/* Input Fields */
+input, select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #0073e6;
+}
+
+/* Forms */
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+/* Inicio de Sesión y Registro */
+.login-container, .register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.login-container h1, .register-container h1 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form-buttons button {
+  flex: 1;
+}
+
+/* Circles */
+.circles {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.circles .circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #0073e6;
+  opacity: 0.8;
+}
+
+.circles .circle.one {
+  width: 200px;
+  height: 200px;
+  bottom: 30px;
+  right: 50px;
+}
+
+.circles .circle.two {
+  width: 150px;
+  height: 150px;
+  bottom: 80px;
+  right: 200px;
+}
+
+.circles .circle.three {
+  width: 100px;
+  height: 100px;
+  bottom: 150px;
+  right: 350px;
+}
+
+/* Dashboard */
+.dashboard-header {
+  background-color: #003366;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.dashboard-header button {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dashboard-header button:hover {
+  background-color: #990000;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.materias-section,
+.estudiantes-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .materias-section {
+      width: 30%;
+  }
+
+  .estudiantes-section {
+      width: 65%;
+  }
+}
+
+.materias-section h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: 1.5rem;
+}
+
+.materias-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.materias-section ul li {
+  background-color: #0073e6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.materias-section ul li:hover {
+  background-color: #005bb5;
+}
+
+.estudiantes-section h2 {
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: 1.5rem;
+}
+
+.estudiantes-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.estudiantes-section table th,
+.estudiantes-section table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.estudiantes-section table th {
+  background-color: #003366;
+  color: white;
+}
+
+.estudiantes-section table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.estudiantes-section table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.estudiantes-section input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.estudiantes-section button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.estudiantes-section button:hover {
+  background-color: #005bb5;
+}
+
+/* Estilo del Dashboard del Estudiante */
+.calificaciones-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.promedio-section {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.promedio-section span {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+/* Sección de Gestión */
+.gestion-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.gestion-section h2 {
+  color: #003366;
+}
+
+.gestion-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.gestion-section ul li {
+  background-color: #f4f4f4;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Estadísticas */
+.stats-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.stats-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.stats-section ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}

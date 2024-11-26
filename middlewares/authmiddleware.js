@@ -1,16 +1,16 @@
 const jwt = require('jsonwebtoken');
 
-module.exports = (req, res, next) => {
+exports.verifyToken = (req, res, next) => {
     const token = req.headers['authorization'];
     if (!token) {
-        return res.status(401).json({ error: 'Acceso denegado. No se proporcionó token.' });
+        return res.status(403).json({ error: 'No se proporcionó un token' });
     }
 
     try {
-        const verified = jwt.verify(token, 'SECRET_KEY'); // Cambia esto por tu clave secreta
-        req.user = verified;
+        const decoded = jwt.verify(token, 'clave-secreta');
+        req.user = decoded;
         next();
-    } catch (err) {
-        res.status(400).json({ error: 'Token no válido.' });
+    } catch (error) {
+        res.status(401).json({ error: 'Token inválido o expirado' });
     }
 };

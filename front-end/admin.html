@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador | Gestor de Calificaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #007bff;
+        }
+        .card p {
+            margin: 5px 0 15px;
+            color: #555;
+        }
+        .card button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #218838;
+        }
+        .logout {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .logout button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .logout button:hover {
+            background-color: #c82333;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logoutButton = document.getElementById('logout');
+            logoutButton.addEventListener('click', () => {
+                // Eliminar token y redirigir al login
+                localStorage.removeItem('token');
+                localStorage.removeItem('usuario');
+                localStorage.removeItem('rol');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido Administrador</h1>
+    </header>
+    <div class="container">
+        <h1>Opciones de Gestión</h1>
+        
+        <div class="card">
+            <h2>Gestión de Usuarios</h2>
+            <p>Agrega, edita o elimina usuarios en el sistema.</p>
+            <button onclick="window.location.href='gestionar_usuarios.html'">Ir a Gestión de Usuarios</button>
+        </div>
+        
+        <div class="card">
+            <h2>Gestión de Cursos</h2>
+            <p>Gestiona los cursos disponibles en la institución.</p>
+            <button onclick="window.location.href='gestionar_cursos.html'">Ir a Gestión de Cursos</button>
+        </div>
+        
+        <div class="card">
+            <h2>Gestión de Materias</h2>
+            <p>Gestiona las materias asignadas a cada curso.</p>
+            <button onclick="window.location.href='gestionar_materias.html'">Ir a Gestión de Materias</button>
+        </div>
+        
+        <div class="card">
+            <h2>Gestión de Periodos Académicos</h2>
+            <p>Gestiona los periodos académicos del año escolar.</p>
+            <button onclick="window.location.href='gestionar_periodos.html'">Ir a Gestión de Periodos</button>
+        </div>
+        
+        <div class="card">
+            <h2>Gestión de Calificaciones</h2>
+            <p>Gestiona las calificaciones de los estudiantes.</p>
+            <button onclick="window.location.href='gestionar_calificaciones.html'">Ir a Gestión de Calificaciones</button>
+        </div>
+    </div>
+    <div class="logout">
+        <button id="logout">Cerrar Sesión</button>
+    </div>
+</body>
+</html>

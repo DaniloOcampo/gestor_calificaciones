@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Profesor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="profesor.js" defer></script>
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Bienvenido, Profesor</h1>
+        <button id="logoutButton">Cerrar Sesión</button>
+    </header>
+    <main class="dashboard-main">
+        <section class="materias-section">
+            <h2>Tus Materias</h2>
+            <ul id="materiasList">
+                <!-- Las materias asignadas al profesor se cargan aquí -->
+            </ul>
+        </section>
+        <section class="estudiantes-section">
+            <h2>Estudiantes</h2>
+            <table id="estudiantesTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Nota</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lista de estudiantes de una materia -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

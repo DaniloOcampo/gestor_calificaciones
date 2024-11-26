@@ -1,5 +1,6 @@
 const express = require('express');
 
+
 // Importar las rutas
 const estudiantesRoutes = require('./routes/estudiantes'); 
 const profesoresRoutes = require('./routes/profesores'); 
@@ -10,6 +11,7 @@ const calificacionesRoutes = require('./routes/calificaciones');
 const periodosRoutes = require('./routes/periodos');
 const profesoresMateriasRoutes = require('./routes/profesoresmaterias');
 const authRoutes = require('./routes/auth');
+
 
 const app = express();
 
